@@ -28,15 +28,48 @@
 
 ## 背景
 
-。。。
+`Network Slimming`利用`L1`正则化对`BN`层缩放因子进行稀疏训练，完成训练后再进行通道级别剪枝操作，最后通过微调恢复性能。在实际应用过程中实现了很好的效果
 
 ## 安装
 
-。。。
+```angular2html
+$ pip install -r requirements.txt
+```
 
 ## 用法
 
-。。。
+首先，设置环境变量
+
+```angular2html
+$ export PYTHONPATH=<project root path>
+$ export CUDA_VISIBLE_DEVICES=0
+```
+
+然后进行`训练-剪枝-微调`
+
+* 训练
+
+```
+$ python tools/train.py -cfg=configs/vggnet/vgg16_bn_cifar100_224_e100_sgd_mslr_slim_1e_4.yaml
+```
+
+* 剪枝
+
+```angular2html
+$ python tools/prune/prune_vggnet.py
+```
+
+* 微调
+
+```angular2html
+$ python tools/train.py -cfg=configs/vggnet/refine_pruned_0_2_vgg16_bn_cifar100_224_e100_sgd_mslr_slim_1e_4.yaml
+```
+
+最后，在配置文件的`PRELOADED`选项中设置微调后的模型路径
+
+```angular2html
+$ python tools/test.py -cfg=configs/vggnet/refine_pruned_0_2_vgg16_bn_cifar100_224_e100_sgd_mslr_slim_1e_4.yaml
+```
 
 ## 主要维护人员
 
