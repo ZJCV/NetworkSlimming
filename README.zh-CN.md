@@ -15,6 +15,8 @@
   <a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg"></a>
 </p>
 
+* 解析：[ Learning Efficient Convolutional Networks through Network Slimming](https://blog.zhujian.life/posts/ec02d2a5.html)
+
 ## 内容列表
 
 - [内容列表](#内容列表)
