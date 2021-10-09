@@ -17,6 +17,10 @@
 
 * 解析：[ Learning Efficient Convolutional Networks through Network Slimming](https://blog.zhujian.life/posts/ec02d2a5.html)
 
+更详细的训练数据可以查看：
+
+* [Details](./docs/details.md)
+
 ## 内容列表
 
 - [内容列表](#内容列表)

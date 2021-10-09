@@ -15,7 +15,9 @@
   <a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg"></a>
 </p>
 
+More training statistics can see:
 
+* [Details](./docs/details.md)
 
 ## Table of Contents
 
